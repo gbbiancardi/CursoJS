@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudação no dia</title>
+    <style>
+        body,
+        input {
+            font: normal 14pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Relógio digital</h1>
+    <div id="resultado"></div>
+</body>
+
+<script>
+    var agora = new Date()
+    var hora = agora.getHours() // pegar hora do sistema
+    var resultado = document.querySelector('div#resultado')
+
+    if (hora < 12 && hora >= 0) {
+        resultado.innerHTML = `Agora são exatamente ${hora} horas.`
+        resultado.innerHTML += ` Bom dia!`
+    } else if (hora < 18 && hora >= 12) {
+        resultado.innerHTML = `Agora são exatamente ${hora} horas.`
+        resultado.innerHTML += ` Boa tarde!`
+    } else if (hora < 24 && hora >= 18) {
+        resultado.innerHTML = `Agora são exatamente ${hora} horas.`
+        resultado.innerHTML += ` Boa noite!`
+    } else {
+        resultado.innerHTML = `${hora} não é um horário válido.`
+    }
+</script>
+
+</html>

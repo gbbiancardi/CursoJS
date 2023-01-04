@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional composta</title>
+    <style>
+        body, input {
+            font: normal 14pt Arial;
+        }
+
+        div#resultado {
+            margin-top: 20px;
+        }
+
+        input#txtnacionalidade {
+            width: 170px;
+        }
+
+        input#botao{
+            width: 395px;
+            height: 30px;
+            color: white;
+            background: #30309e;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Imigração</h1>
+    <p>
+        Digite seu país de origem: <input type="text" id="txtnacionalidade">
+    </p>
+    <input type="button" value="Verificar" id="botao" onclick="verificar()">
+    <div id="resultado"></div>
+</body>
+
+<script>
+    function verificar() {
+        var vnacionalidade = document.querySelector('input#txtnacionalidade')
+        var nacionalidade = String(vnacionalidade.value).toUpperCase()
+        var resultado = document.querySelector('div#resultado')
+
+        if (nacionalidade == 'BRASIL') {
+            resultado.innerHTML = `Pode seguir, sua nacionalidade é brasileira!`
+        } else {
+            resultado.innerHTML = `Por favor, dirija-se ao setor de imigração. Você é estrangeiro!`
+        }
+    }
+</script>
+</html>

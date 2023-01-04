@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: #6565db;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript.</p>
+    <div id="msg">Clique em mim</div>
+    <!-- <div class="msg">Clica em mim</div> -->
+    <script>
+        var corpo = window.document.body
+        var p0 = window.document.getElementsByTagName('p')[0] // pega o primeiro elemento da tag
+        var p1 = document.getElementsByTagName('p')[1] // pega o segundo
+        // document.write('Está escrito assim '+ p0.innerText)
+        // p0.style.color = 'red'
+        // document.write(p1.innerHTML) // pega todas as propriedades que estiverem dentro do elemento
+        //var d = document.getElementById("msg") // seleciona por id
+        // d.innerText = "Estou aguardando..."
+        
+        /* var d = document.querySelector('div#msg')
+        d.style.color = 'blue' */ //seletor por div e id
+
+        /* var d = document.querySelector('div.msg')
+        d.style.color = 'blue' */ //seletor por div e class
+    </script>
+</body>
+</html>
